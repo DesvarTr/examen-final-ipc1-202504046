@@ -10,4 +10,16 @@ package com.mycompany.examenfinal;
  */
 public class nodoDoble {
     
+    protected cancion contenido;
+    public nodoDoble next;
+    public nodoDoble prev;
+    
+    public nodoDoble(cancion contenido){
+    
+        this.contenido = contenido;
+        this.next = null;
+        this.prev = null;
+    
+    }
+    
 }

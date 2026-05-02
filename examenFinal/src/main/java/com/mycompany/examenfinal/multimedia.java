@@ -8,6 +8,18 @@ package com.mycompany.examenfinal;
  *
  * @author gonza
  */
-public class multimedia {
+public abstract class multimedia {
+    
+    public String titulo;
+    public int duracion;
+    
+    public multimedia(String titulo,int duracion){
+    
+        this.titulo = titulo;
+        this.duracion = duracion;
+    
+    }
+    
+    public abstract void reproducir();
     
 }

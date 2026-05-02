@@ -1,7 +1,3 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- */
-
 package com.mycompany.examenfinal;
 
 /**
@@ -11,6 +7,18 @@ package com.mycompany.examenfinal;
 public class ExamenFinal {
 
     public static void main(String[] args) {
-        System.out.println("Hello World!");
+        
+        cancion song1 = new cancion("Enamorado tuyo",180,"CDN");
+        cancion song2 = new cancion("Highway to hell",190,"AC/DC");
+        cancion song3 = new cancion("Robot",180,"Esteman");
+        
+        playlist lista = new playlist();
+        lista.agregarCancion(song1);
+        lista.agregarCancion(song2);
+        lista.agregarCancion(song3);
+        
+        lista.mostrarPlaylist();
+        
+        
     }
 }
