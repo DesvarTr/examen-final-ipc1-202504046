@@ -22,8 +22,12 @@ public class ExamenFinal {
         lista.siguiente();
         lista.siguiente();
         lista.anterior();
+        lista.mostrarPlaylist();
         lista.eliminarActual();
         lista.eliminarActual();
+        lista.eliminarActual();
+        
+        lista.mostrarPlaylist();
         
     }
 }

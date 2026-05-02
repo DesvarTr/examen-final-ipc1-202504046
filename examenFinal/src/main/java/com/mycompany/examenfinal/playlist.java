@@ -86,6 +86,15 @@ public class playlist {
         if(cabeza == null){
             System.out.println("Lista vacia");
         }
+        
+        // Caso unico elemento
+        if (cabeza == cola) {
+            cabeza = null;
+            cola = null;
+            actual = null;
+            return;
+        }
+        
         // Caso cabeza
         if(actual == cabeza){
             cabeza = cabeza.next;
