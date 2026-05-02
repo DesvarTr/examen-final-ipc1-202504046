@@ -19,6 +19,11 @@ public class ExamenFinal {
         
         lista.mostrarPlaylist();
         
+        lista.siguiente();
+        lista.siguiente();
+        lista.anterior();
+        lista.eliminarActual();
+        lista.eliminarActual();
         
     }
 }

@@ -12,7 +12,7 @@ public class playlist {
     
     private nodoDoble cabeza;
     private nodoDoble cola;
-    private cancion actual;
+    private nodoDoble actual;
     private int tamanio;
     
     public playlist(){
@@ -31,6 +31,8 @@ public class playlist {
             
             cabeza = newNode;
             cola = newNode;
+            actual = cabeza;
+            actual.contenido.reproducir();
                 
         } else {
         
@@ -44,6 +46,70 @@ public class playlist {
         
         }
         tamanio++;
+    
+    }
+    
+    public void siguiente(){
+    
+        if(cabeza == null){System.out.println("Lista vacia");}
+        else{
+        
+            if(actual == cola){
+                System.out.println("Ya no hay siguientes");
+                return;
+            }
+            actual = actual.next;
+            actual.contenido.reproducir();
+        
+        }
+    
+    }
+    
+    public void anterior(){
+    
+        if(cabeza == null){System.out.println("Lista vacia");}
+        else{
+        
+            if(actual == cabeza){
+                System.out.println("Ya no hay anteriores");
+                return;
+            }
+            actual = actual.prev;
+            actual.contenido.reproducir();
+        
+        }
+    
+    }
+    
+    public void eliminarActual(){
+    
+        if(cabeza == null){
+            System.out.println("Lista vacia");
+        }
+        // Caso cabeza
+        if(actual == cabeza){
+            cabeza = cabeza.next;
+            cabeza.prev = null;
+            actual = cabeza;
+        }
+        // Caso cola
+        else if (actual == cola) {
+        
+            cola = cola.prev;
+            cola.next = null;
+            actual = cola;
+            
+        }
+        // Caso intermedio
+        else {
+        
+            actual.next.prev = actual.prev;
+            actual.prev.next = actual.next;
+            actual = actual.next;
+            
+        }
+        
+        tamanio--;
     
     }
     

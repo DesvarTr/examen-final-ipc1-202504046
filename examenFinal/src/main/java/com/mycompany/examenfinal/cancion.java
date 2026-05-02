@@ -22,7 +22,7 @@ public class cancion extends multimedia{
             
     @Override
     public void reproducir() {
-        System.out.println("PLAYING");
+        System.out.println(titulo+" -- PLAYING...");
     }
     
 }
